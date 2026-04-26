@@ -399,7 +399,7 @@ const EMBEDDED_CHANNELS = [
    We fetch through multiple proxies in parallel (Promise.any) — first winner serves. */
 
 const SOURCES = [
-  { id: 'embedded', name: '⭐ المضمّنة',           url: null },
+  { id: 'embedded', name: '⭐ المضمّنة',           url: null, embedded: true },
   { id: 'blue',     name: '📺 القائمة الرئيسية',     url: 'http://blueiptv.live:8080/get.php?username=375348287443&password=113218353782&type=m3u_plus&output=ts' },
   { id: 'luka',     name: '📺 خادم احتياطي 1',      url: 'http://lukatv.net:8080/get.php?username=375348287443&password=113218353782&type=m3u_plus&output=ts' },
   { id: 'bluecc',   name: '📺 خادم احتياطي 2',      url: 'http://bluetv.cc:8080/get.php?username=375348287443&password=113218353782&type=m3u_plus&output=ts' },
@@ -407,12 +407,13 @@ const SOURCES = [
 
 /* Proxies - ordered by reliability. We race them in parallel. */
 const PROXIES = [
-  (u) => `https://corsproxy.io/?${encodeURIComponent(u)}`,
   (u) => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
+  (u) => `https://corsproxy.io/?${encodeURIComponent(u)}`,
+  (u) => `https://thingproxy.freeboard.io/fetch/${u}`,
   (u) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(u)}`,
   (u) => `https://cors.eu.org/${u}`,
   (u) => `https://proxy.cors.sh/${u}`,
-  (u) => u  // direct (works if served with CORS headers, like jsDelivr)
+  (u) => u
 ];
 
 let allChannels = [];
