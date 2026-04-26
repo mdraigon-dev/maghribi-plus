@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0a0e1a">
-<title>مغربي بلس · Maghribi Plus</title>h
+<title>شام الياسمين</title>h
 
 <link rel="preconnect" href="https://fonts.goohgleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -239,10 +239,10 @@ body {
 
 <header class="header">
   <div class="logo">
-    <div class="logo-mark">م</div>
+    <div class="logo-mark">ش</div>
     <div class="logo-text">
-      <span class="ar">مغربي بلس</span>
-      <span class="en">MAGHRIBI PLUS</span>
+      <span class="ar">شام الياسمين</span>
+      <span class="en">SHAM AL YASMIN</span>
     </div>
   </div>
   <div class="header-actions">
@@ -320,89 +320,18 @@ body {
 /* ===== EMBEDDED CHANNEL LIST =====
    These channels are built into the app so it works instantly with no network fetching.
    Users can still load external M3U lists via the menu. */
-const EMBEDDED_CHANNELS = [
-  // === MAROC - القنوات المغربية ===
-  { name: 'Al Aoula (الأولى)', group: 'المغرب', country: 'MA', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Al_Aoula_Logo.png/320px-Al_Aoula_Logo.png',
-    url: 'https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/al_aoula_inter/hls_snrt/index.m3u8' },
-  { name: 'Al Aoula Laayoune', group: 'المغرب', country: 'MA', logo: '',
-    url: 'https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/al_aoula_laayoune/hls_snrt/index.m3u8' },
-  { name: '2M Monde', group: 'المغرب', country: 'MA', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/2M_TV_Logo.svg/320px-2M_TV_Logo.svg.png',
-    url: 'https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/2m_monde/hls_video_ts/index.m3u8' },
-  { name: 'Arriadia (الرياضية)', group: 'المغرب', country: 'MA', logo: '',
-    url: 'https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/arriadia/hls_snrt/index.m3u8' },
-  { name: 'Arrabiaa (الرابعة)', group: 'المغرب', country: 'MA', logo: '',
-    url: 'https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/arrabiaa/hls_snrt/index.m3u8' },
-  { name: 'Al Maghribia (المغربية)', group: 'المغرب', country: 'MA', logo: '',
-    url: 'https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/al_maghribia_snrt/hls_snrt/index.m3u8' },
-  { name: 'Assadissa (السادسة)', group: 'المغرب', country: 'MA', logo: '',
-    url: 'https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/assadissa/hls_snrt/index.m3u8' },
-  { name: 'Tamazight (الأمازيغية)', group: 'المغرب', country: 'MA', logo: '',
-    url: 'https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/tamazight_tv8_snrt/hls_snrt/index.m3u8' },
-  { name: 'Medi 1 TV', group: 'المغرب', country: 'MA', logo: '',
-    url: 'https://streaming1.medi1tv.com/live/smil:medi1ar.smil/playlist.m3u8' },
-  { name: 'M24 TV', group: 'المغرب', country: 'MA', logo: '',
-    url: 'https://www.m24tv.ma/live/smil:OutStream1.smil/playlist.m3u8' },
-  { name: 'Télé Maroc', group: 'المغرب', country: 'MA', logo: '',
-    url: 'https://api.new.livestream.com/accounts/27130247/events/8196478/live.m3u8' },
-
-  // === إخبارية عربية ===
-  { name: 'Al Jazeera (الجزيرة)', group: 'الأخبار', country: 'QA', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aljazeera_eng.svg/320px-Aljazeera_eng.svg.png',
-    url: 'https://live-hls-web-aja.getaj.net/AJA/index.m3u8' },
-  { name: 'Al Jazeera English', group: 'الأخبار', country: 'QA', logo: '',
-    url: 'https://live-hls-web-aje.getaj.net/AJE/index.m3u8' },
-  { name: 'Al Jazeera Mubasher', group: 'الأخبار', country: 'QA', logo: '',
-    url: 'https://live-hls-web-ajm.getaj.net/AJM/index.m3u8' },
-  { name: 'BBC Arabic', group: 'الأخبار', country: 'UK', logo: '',
-    url: 'https://vs-cmaf-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_arabic_tv/pc_hd_abr_v2.mpd' },
-  { name: 'France 24 Arabic', group: 'الأخبار', country: 'FR', logo: '',
-    url: 'https://static.france24.com/live/F24_AR_HI_HLS/live_web.m3u8' },
-  { name: 'Sky News Arabia', group: 'الأخبار', country: 'AE', logo: '',
-    url: 'https://stream.skynewsarabia.com/hls/sna.m3u8' },
-  { name: 'Al Arabiya (العربية)', group: 'الأخبار', country: 'SA', logo: '',
-    url: 'https://av.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8' },
-  { name: 'Al Hadath (الحدث)', group: 'الأخبار', country: 'SA', logo: '',
-    url: 'https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8' },
-  { name: 'DW Arabic', group: 'الأخبار', country: 'DE', logo: '',
-    url: 'https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8' },
-  { name: 'RT Arabic', group: 'الأخبار', country: 'RU', logo: '',
-    url: 'https://rt-arb.rttv.com/dvr/rtarab/playlist.m3u8' },
-
-  // === ترفيه عربي ===
-  { name: 'Alaraby TV', group: 'ترفيه', country: 'QA', logo: '',
-    url: 'https://alaraby.cdn.octivid.com/alaraby/smil:alaraby.stream.smil/chunklist.m3u8' },
-  { name: 'Alaraby 2 TV', group: 'ترفيه', country: 'QA', logo: '',
-    url: 'https://alaraby.cdn.octivid.com/alaraby2n/smil:alaraby2n.stream.smil/chunklist.m3u8' },
-  { name: 'Africanews', group: 'الأخبار', country: 'FR', logo: '',
-    url: 'https://rakuten-africanews-2-be.samsung.wurl.tv/manifest/playlist.m3u8' },
-
-  // === دينية ===
-  { name: 'Makkah Live (مكة المكرمة)', group: 'دينية', country: 'SA', logo: '',
-    url: 'https://svs.itworkscdn.net/smstreaming-live/smil:mecca.smil/playlist.m3u8' },
-  { name: 'Madinah Live (المدينة المنورة)', group: 'دينية', country: 'SA', logo: '',
-    url: 'https://svs.itworkscdn.net/smstreaming-live/smil:medinah.smil/playlist.m3u8' },
-  { name: 'Al Quran Al Kareem', group: 'دينية', country: 'SA', logo: '',
-    url: 'https://svs.itworkscdn.net/smstreaming-live/smil:qurantv.smil/playlist.m3u8' },
-
-  // === قنوات عامة إقليمية ===
-  { name: 'Dubai TV', group: 'الإمارات', country: 'AE', logo: '',
-    url: 'https://dmi-mbr-live-dubaitv.ercdn.net/dubaitv/dubaitv.m3u8' },
-  { name: 'Dubai One', group: 'الإمارات', country: 'AE', logo: '',
-    url: 'https://dmi-mbr-live-dubaione.ercdn.net/dubaione/dubaione.m3u8' },
-  { name: 'Abu Dhabi TV', group: 'الإمارات', country: 'AE', logo: '',
-    url: 'https://vo-live.cdb.cdn.orange.com/Content/Channel/AbuDhabiTVChannel/HLS/index.m3u8' },
-  { name: 'Abu Dhabi Sports 1', group: 'رياضة', country: 'AE', logo: '',
-    url: 'https://vo-live.cdb.cdn.orange.com/Content/Channel/AbuDhabiSportsChannel1/HLS/index.m3u8' }
-];
+const EMBEDDED_CHANNELS = [];
 
 /* ===== DATA SOURCES =====
    Each source maps to a single small M3U file from iptv-org.
    We fetch through multiple proxies in parallel (Promise.any) — first winner serves. */
 
 const SOURCES = [
-  { id: 'embedded', name: '⭐ المضمّنة',           url: null, embedded: true },
-  { id: 'blue',     name: '📺 القائمة الرئيسية',     url: 'http://blueiptv.live:8080/get.php?username=375348287443&password=113218353782&type=m3u_plus&output=ts' },
-  { id: 'luka',     name: '📺 خادم احتياطي 1',      url: 'http://lukatv.net:8080/get.php?username=375348287443&password=113218353782&type=m3u_plus&output=ts' },
-  { id: 'bluecc',   name: '📺 خادم احتياطي 2',      url: 'http://bluetv.cc:8080/get.php?username=375348287443&password=113218353782&type=m3u_plus&output=ts' },
+  { id: 'arabic',   name: '🌍 القنوات العربية',   url: 'https://iptv-org.github.io/iptv/languages/ara.m3u' },
+  { id: 'family',   name: '👨‍👩‍👧 قنوات العائلة',    url: 'https://iptv-org.github.io/iptv/categories/family.m3u' },
+  { id: 'blue',     name: '📺 القائمة الرئيسية',   url: 'http://blueiptv.live:8080/get.php?username=375348287443&password=113218353782&type=m3u_plus&output=ts' },
+  { id: 'luka',     name: '📺 خادم احتياطي 1',     url: 'http://lukatv.net:8080/get.php?username=375348287443&password=113218353782&type=m3u_plus&output=ts' },
+  { id: 'bluecc',   name: '📺 خادم احتياطي 2',     url: 'http://bluetv.cc:8080/get.php?username=375348287443&password=113218353782&type=m3u_plus&output=ts' },
 ];
 
 /* Proxies - ordered by reliability. We race them in parallel. */
@@ -420,7 +349,7 @@ let allChannels = [];
 let filteredChannels = [];
 let activeGroup = 'الكل';
 let searchTerm = '';
-let currentSourceId = 'embedded';
+let currentSourceId = 'arabic';
 let hls = null;
 
 function parseM3U(text) {
